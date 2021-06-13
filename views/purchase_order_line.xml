@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+       <data>
+       <record id="purchase_order_form_additions" model="ir.ui.view">
+            <field name="name">purchase.order.form</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">	
+                <xpath expr="//field[@name='order_line']/tree//field[@name='product_qty']" position="after">
+                    <field name="sale_price"/>
+                    <field name="standard_price"/>
+                    <field name="last_purchase_price"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+    </data>
+</odoo>
